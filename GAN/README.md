@@ -1,2 +1,2 @@
-Ce projet est une inteligence artificiel de type GAN que j'ai codé en 2020 et qui a pour objectif d'aprendre le concept d'une image a partir d'une base de photos donnée et de recréer une image.
-
+Ce projet est une intelligence artificielle de type GAN que j'ai codée en 2020. Le but de ce programme est d'inventer une image à partir d'une base d'images.
+En lui donnant en entrée une base d'environ 500 images différentes d'une même chose (par exemple des chats), le programme va générer une nouvelle image (ici un nouveau chat).
