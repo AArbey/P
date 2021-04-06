@@ -1,5 +1,5 @@
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
-#					Imports						#
+#			Imports			#
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
 
 import os
@@ -20,20 +20,20 @@ import connect4
 from connect4 import ConnectBoard, draw_board, initial_board
 
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
-#				Initializing					#
+#		Initializing			#
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
 
 ListsOfBoards = []
 
-TOKEN = 'ODE4MTgwOTg5MzE4MjAxMzkz.YEUUbA.czY8LGfSlh3BCnFBRtpuWrrovcA'
+TOKEN = 'Token a récupérer depuis le pannel developper Discord' #Le token étant privé, je ne peux pas vous le partager ici.
 
 client = discord.Client(intents=discord.Intents.all())
 slash = SlashCommand(client, sync_commands=True)
 
-guild_ids = [757997610442424390]
+guild_ids = [id du serveur concerné] #l'id est a récuperer depuis les paramètres d'un serveur Discord.
 
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
-#				 ON READY EVENT 				#
+#		 ON READY EVENT 		#
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
 @client.event
 async def on_ready():
@@ -41,7 +41,7 @@ async def on_ready():
 
 
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
-#				ON SLASH EVENTS				    #
+#		ON SLASH EVENTS		    #
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
 
 
@@ -258,7 +258,7 @@ async def _disconnect(ctx, text: str):
 	
 
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
-#				ON MESSAGE EVENTS				#
+#		ON MESSAGE EVENTS		#
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
 
 @client.event
@@ -302,7 +302,7 @@ async def on_message(message):
 
 	#=-=-=-=-=-=-=- random reaction -=-=-=-=-=-=-=-=#
 	elif messagetxt == 'get out of here':
-		await message.channel.send("Well f**k y...")
+		await message.channel.send("See you later!")
 		await client.change_presence(status=discord.Status.offline)
 		return
 
@@ -316,34 +316,7 @@ async def on_message(message):
 	#=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
 
 
-	elif message.content == 'MOM':
-		await message.delete()
-		for vc in client.voice_clients:
-			if vc.guild == message.guild:
-				if vc.is_connected():
-					if vc.is_playing():
-						vc.stop()
-					source = await discord.FFmpegOpusAudio.from_probe("MOM.mp3")
-					vc.play(source)
 
-	elif message.content == 'RUSH':
-		await message.delete()
-		for vc in client.voice_clients:
-			if vc.guild == message.guild:
-				if vc.is_connected():
-					if vc.is_playing():
-						vc.stop()
-					source = await discord.FFmpegOpusAudio.from_probe("rush.mp3")
-					vc.play(source)
-
-	elif message.content.lower() == 'monkey':
-		for vc in client.voice_clients:
-			if vc.guild == message.guild:
-				if vc.is_connected():
-					if vc.is_playing():
-						vc.stop()
-					source = await discord.FFmpegOpusAudio.from_probe("monkey.mp3")
-					vc.play(source)
 
 	elif message.content.lower() == 'hellothere':
 		await message.delete()
@@ -358,7 +331,7 @@ async def on_message(message):
 	
 
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
-#				ON REACTION EVENTS				#
+#		ON REACTION EVENTS		#
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
 @client.event
 async def on_reaction_add(reaction, user):
@@ -386,10 +359,6 @@ async def on_reaction_add(reaction, user):
 				await reaction.remove(user)
 
 			return
-
-#=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
-#				ON TYPING EVENTS				#
-#=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
 
 
 client.run(TOKEN)
