@@ -1,6 +1,6 @@
-Ce Projet est un programme en Python conçu pour le logiciel de messagerie Discord, permettant à l'utilisateur de connecter un bot(==robot) dans un canal vocal et de lui faire jouer de la musique provenant de Youtube, que ça soit via un lien ou en effectuant automatiquement une recherche sur Youtube a partir d'un nom donné par l'utilisateur. Il inclus aussi un jeux de Puissance 4 jouable directement depuis Discord.
+Ce Projet est un programme en Python conçu pour le logiciel de messagerie Discord, permettant à l'utilisateur de connecter un bot(==robot) dans un canal vocal et de lui faire jouer de la musique provenant de Youtube, que ce soit via un lien ou en effectuant automatiquement une recherche sur Youtube a partir d'un nom donné par l'utilisateur. Il inclus aussi un jeux de Puissance 4 utilisable directement depuis Discord.
 
-J'ai personnelement créer une machine virtuelle sous Linux fonctionnant en permanence sur ma box internet pour que le robot soit toujours connecté sur le serveur.
+J'ai personnellement créé une machine virtuelle sous Linux fonctionnant en permanence sur ma box internet pour que le robot soit toujours connecté sur le serveur.
 
 J'utilise pour ce programme les librairies suivantes:
   discord.py: Permet la communication entre mon programme et Discord
