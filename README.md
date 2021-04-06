@@ -1,4 +1,4 @@
-# PrivateProjects
+# RandomProjects
 J'ai toujours eu un attrait pour la science et la technologie, j'ai ainsi suivi pendant 3
 ans de la 3ème à la 1ère des cours d'informatique avec Magic Makers, en me spécialisant la
 dernière année sur l'intelligence artificielle.
